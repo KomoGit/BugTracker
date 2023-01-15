@@ -18,13 +18,26 @@ class MyApp extends StatelessWidget {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              const DrawerHeader(
-                decoration: BoxDecoration(
+              DrawerHeader(
+                decoration: const BoxDecoration(
                   color: Colors.blue,
                 ),
-                child: Center(
-                  child: Text('Insert User Profile Here.',
-                      style: TextStyle(color: Colors.white)),
+                child: InkWell(
+                  onTap: () => testMethod("Profile Clicked"),
+                  child: Padding(
+                    padding: const EdgeInsets.all(3),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Flexible(
+                            child: Image.network(
+                                "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg")),
+                        const Flexible(
+                          child: Text("User 001"),
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
               ListItem("Dashboard", (() => testMethod("test 1"))),
@@ -33,7 +46,9 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
-        body: const Center(child: Text("Hello World")),
+        body: const Center(
+          child: Text("Hello World", style: TextStyle(fontSize: 24)),
+        ), // body: const Center(child: Text("Hello World")),
       ),
     );
   }
