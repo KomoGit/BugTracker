@@ -9,11 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # Visual - UI Dependencies
-loading_animation_widget:
-google_fonts:
-syncfusion_flutter_charts: 
-cupertino_icons: ^1.0.2
+  google_fonts: ^3.0.1
+  loading_animation_widget:
+  syncfusion_flutter_charts: 
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
