@@ -1,4 +1,4 @@
-import 'package:bugtracker/UI/ui_home.dart';
+import 'package:bugtracker/UI/ui_app.dart';
 import 'package:bugtracker/UI/ui_testpage.dart';
 import 'package:flutter/material.dart';
 import 'package:bugtracker/UI/ui_listitem.dart';
