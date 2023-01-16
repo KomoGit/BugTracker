@@ -1,4 +1,4 @@
-import 'package:bugtracker/mock/m_method.dart';
+import 'package:bugtracker/Debug/d_log.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -9,6 +9,6 @@ class ListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(title: Text(itemname), onTap: () => testMethod(itemname));
+    return ListTile(title: Text(itemname), onTap: () => debugOut(itemname));
   }
 }

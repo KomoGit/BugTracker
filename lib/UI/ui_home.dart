@@ -1,6 +1,6 @@
+import 'package:bugtracker/Debug/d_log.dart';
 import 'package:bugtracker/UI/ui_item.dart';
 import 'package:flutter/material.dart';
-import 'package:bugtracker/mock/m_method.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,16 +23,22 @@ class MyApp extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 child: InkWell(
-                  onTap: () => testMethod("Profile Clicked"),
+                  // onTap: () => testMethod("Profile Clicked"),
+                  onTap: (() => debugOut("Profile Clicked")),
                   child: Padding(
-                    padding: const EdgeInsets.all(3),
+                    padding: const EdgeInsets.all(0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
+                      children: const [
                         Flexible(
-                            child: Image.network(
-                                "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg")),
-                        const Flexible(
+                            child: CircleAvatar(
+                          maxRadius: 50,
+                          backgroundImage: NetworkImage(
+                              "https://randomuser.me/api/portraits/women/31.jpg"),
+                        )),
+                        // child: Image.network(
+                        //     "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg")),
+                        Flexible(
                           child: Text("User 001"),
                         )
                       ],
@@ -40,9 +46,9 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              ListItem("Dashboard", (() => testMethod("test 1"))),
-              ListItem("Profile", (() => testMethod("test 2"))),
-              ListItem("Logout", (() => testMethod("test 3"))),
+              ListItem("Dashboard", (() => debugOut("test 1"))),
+              ListItem("Profile", (() => debugOut("test 2"))),
+              ListItem("Logout", (() => debugOut("test 3"))),
             ],
           ),
         ),
