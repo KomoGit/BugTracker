@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //darkTheme: ,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(25, 25, 25, 255),
         appBar: const PersistentAppbar(),
         drawer: const PersistentDrawer(),
         //On Press a new window should be opened to allow user to insert ticket details
@@ -23,10 +24,7 @@ class MyApp extends StatelessWidget {
           child: const Icon(Icons.add),
           onPressed: () => debugOut("Floating Action Button"),
         ),
-        body: HomePage(),
-        // body: const Center(
-        //   child: Text("Hello World", style: TextStyle(fontSize: 24)),
-        // ),
+        body: const HomePage(),
       ),
     );
   }

@@ -5,7 +5,6 @@ class ListItem extends StatelessWidget {
   final StatelessWidget page;
   String itemname = "WARNING : Value is not given.";
   ListItem(this.itemname, this.page, {super.key});
-
   @override
   Widget build(BuildContext context) {
     return ListTile(
