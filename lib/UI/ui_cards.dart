@@ -13,7 +13,7 @@ class DashboardCards extends StatelessWidget {
           shape: BoxShape.rectangle,
           color: Colors.white,
           border: Border.all(width: 50, color: Colors.white),
-          borderRadius: const BorderRadius.all(Radius.circular(5)))),
+          borderRadius: const BorderRadius.all(Radius.circular(15)))),
       child: childWidget,
     );
   }
