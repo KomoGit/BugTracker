@@ -18,46 +18,31 @@ class HomePage extends StatelessWidget {
         ),
       ]),
       const Padding(padding: EdgeInsets.all(10)),
-      Row(children: const [
-        Padding(
-          padding: EdgeInsets.all(15),
+      SizedBox(
+        width: double.infinity,
+        height: 150,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: const [
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+            Padding(padding: EdgeInsets.all(10)),
+            DashboardCards(40, Text("LeBron Jaymezz")),
+          ],
         ),
-        DashboardCards(
-            40,
-            Center(
-              child: Text("LeBron Jaymes"),
-            )),
-        Padding(padding: EdgeInsets.all(15)),
-        DashboardCards(
-            40,
-            Center(
-              child: Text("LeBron Jaymes"),
-            )),
-        Padding(padding: EdgeInsets.all(15)),
-        DashboardCards(
-            40,
-            Center(
-              child: Text("LeBron Jaymes"),
-            )),
-        Padding(padding: EdgeInsets.all(15)),
-        DashboardCards(
-            40,
-            Center(
-              child: Text("LeBron Jaymes"),
-            )),
-        Padding(padding: EdgeInsets.all(15)),
-        DashboardCards(
-            40,
-            Center(
-              child: Text("LeBron Jaymes"),
-            )),
-        Padding(padding: EdgeInsets.all(15)),
-        DashboardCards(
-            40,
-            Center(
-              child: Text("LeBron Jaymes"),
-            )),
-      ]),
+      ),
     ]);
   }
 }
