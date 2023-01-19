@@ -27,16 +27,36 @@ class HomePage extends StatelessWidget {
             Center(
               child: Text("LeBron Jaymes"),
             )),
-        // Container(
-        //   decoration: (BoxDecoration(
-        //       shape: BoxShape.rectangle,
-        //       color: Colors.white,
-        //       border: Border.all(width: 50, color: Colors.white),
-        //       borderRadius: const BorderRadius.all(Radius.circular(5)))),
-        //   child: const Center(
-        //     child: Text("LeBron James"),
-        //   ),
-        // ),
+        Padding(padding: EdgeInsets.all(15)),
+        DashboardCards(
+            40,
+            Center(
+              child: Text("LeBron Jaymes"),
+            )),
+        Padding(padding: EdgeInsets.all(15)),
+        DashboardCards(
+            40,
+            Center(
+              child: Text("LeBron Jaymes"),
+            )),
+        Padding(padding: EdgeInsets.all(15)),
+        DashboardCards(
+            40,
+            Center(
+              child: Text("LeBron Jaymes"),
+            )),
+        Padding(padding: EdgeInsets.all(15)),
+        DashboardCards(
+            40,
+            Center(
+              child: Text("LeBron Jaymes"),
+            )),
+        Padding(padding: EdgeInsets.all(15)),
+        DashboardCards(
+            40,
+            Center(
+              child: Text("LeBron Jaymes"),
+            )),
       ]),
     ]);
   }
