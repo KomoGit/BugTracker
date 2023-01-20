@@ -38,8 +38,8 @@ class PersistentDrawer extends StatelessWidget {
               ),
             ),
           ),
-          ListItem("Home", const MyApp()),
-          ListItem("Test Page", const TestPage()),
+          ListItem(lang.getHomeText!, const MyApp()),
+          ListItem(lang.getTestPageText!, const TestPage()),
         ],
       ),
     );

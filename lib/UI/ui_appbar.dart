@@ -1,4 +1,7 @@
+import 'package:bugtracker/Localization/lang_select.dart';
 import 'package:flutter/material.dart';
+
+LangSelect lang = LangSelect();
 
 class PersistentAppbar extends StatelessWidget implements PreferredSizeWidget {
   const PersistentAppbar({super.key});
@@ -8,7 +11,7 @@ class PersistentAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text("Project - Tracer"),
+      title: Text(lang.getAppBarText!),
     );
   }
 }
