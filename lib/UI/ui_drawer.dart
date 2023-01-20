@@ -23,15 +23,15 @@ class PersistentDrawer extends StatelessWidget {
                 padding: const EdgeInsets.all(0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Flexible(
+                  children: [
+                    const Flexible(
                         child: CircleAvatar(
                       maxRadius: 50,
                       backgroundImage: NetworkImage(
                           "https://randomuser.me/api/portraits/women/31.jpg"),
                     )),
                     Flexible(
-                      child: Text("User 001"),
+                      child: Text("${lang.getUserGreetText!}Lena!"),
                     )
                   ],
                 ),

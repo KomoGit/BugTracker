@@ -1,6 +1,7 @@
 //Translations for English language UI.
 
 class English {
+  static String greetUserText = "Hello ";
   static String testPageText = "Test Page";
   static String appBarText = "Project - Tracer";
   static String homeButtonText = "Home";

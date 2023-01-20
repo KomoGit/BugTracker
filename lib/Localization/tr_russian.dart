@@ -1,6 +1,7 @@
 //Translations for Russian language UI.
 
 class Russian {
+  static String greetUserText = "Привет ";
   static String testPageText = "Тестовая страница";
   static String appBarText = "Проект - Трейсер";
   static String homeButtonText = "Дом";
