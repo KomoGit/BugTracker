@@ -73,7 +73,7 @@ class LangSelect {
   }
 
   String? get getAppBarText {
-    return currentAppBarText;
+    return currentAppBarText!;
   }
 
   String? get getHomeText {
