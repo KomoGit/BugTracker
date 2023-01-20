@@ -3,14 +3,13 @@ import 'package:bugtracker/Localization/tr_english.dart';
 import 'package:bugtracker/Localization/tr_russian.dart';
 
 class LangSelect {
+  static String? currentUserGreetText;
   static String? currentTestPageText;
   static String? currentAppBarText;
   static String? currentHomeText;
   static String? currentDummyText;
   static String? currentFloatingActionToolTipText;
   static String? currentDashboardText;
-  // LangSelect(this.currentFloatingActionToolTipText, this.currentDummyText,
-  //     this.currentDashboardText);
 
   void selectLanguage(String selectedLang) {
     switch (selectedLang) {
@@ -27,6 +26,7 @@ class LangSelect {
   }
 
   void selectEnglish() {
+    currentUserGreetText = English.greetUserText;
     currentTestPageText = English.testPageText;
     currentAppBarText = English.appBarText;
     currentHomeText = English.homeButtonText;
@@ -36,6 +36,7 @@ class LangSelect {
   }
 
   void selectRussian() {
+    currentUserGreetText = Russian.greetUserText;
     currentTestPageText = Russian.testPageText;
     currentAppBarText = Russian.appBarText;
     currentHomeText = Russian.homeButtonText;
@@ -81,5 +82,9 @@ class LangSelect {
 
   String? get getTestPageText {
     return currentTestPageText!;
+  }
+
+  String? get getUserGreetText {
+    return currentUserGreetText!;
   }
 }
