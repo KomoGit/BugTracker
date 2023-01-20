@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class DashboardCards extends StatelessWidget {
-  final int cardSize;
+  final double cardSize;
   final Widget? childWidget;
 
   const DashboardCards(this.cardSize, this.childWidget, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: (BoxDecoration(
-          shape: BoxShape.rectangle,
-          color: Colors.white,
-          border: Border.all(width: 50, color: Colors.white),
-          borderRadius: const BorderRadius.all(Radius.circular(15)))),
-      child: childWidget,
-    );
+    return Card(
+        elevation: 3,
+        shadowColor: Colors.white,
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: SizedBox(width: cardSize, height: cardSize, child: childWidget));
   }
 }
