@@ -1,5 +1,5 @@
-import 'package:bugtracker/UI/ui_appbar.dart';
-import 'package:bugtracker/UI/ui_drawer.dart';
+import 'package:bugtracker/UI/Widgets/ui_appbar.dart';
+import 'package:bugtracker/UI/Widgets/ui_drawer.dart';
 import 'package:flutter/material.dart';
 
 // TEST PAGE IS FOR DEBUG PURPOSES. IT WILL BE DELETED
