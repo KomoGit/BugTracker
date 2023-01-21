@@ -13,7 +13,7 @@ class DashboardCards extends StatelessWidget {
         shadowColor: Colors.white,
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(25),
         ),
         child: SizedBox(width: cardSize, height: cardSize, child: childWidget));
   }
