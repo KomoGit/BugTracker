@@ -1,5 +1,5 @@
-import 'package:bugtracker/Debug/d_log.dart';
 import 'package:bugtracker/Localization/lang_select.dart';
+import 'package:bugtracker/UI/Widgets/ui_alert.dart';
 import 'package:bugtracker/UI/Widgets/ui_appbar.dart';
 import 'package:bugtracker/UI/Widgets/ui_drawer.dart';
 import 'package:bugtracker/UI/Screens/ui_home.dart';
@@ -22,12 +22,15 @@ class MyApp extends StatelessWidget {
         drawer: const PersistentDrawer(),
         //On Press a new window should be opened to allow user to insert ticket details
         floatingActionButton: FloatingActionButton(
-          tooltip: lang
-              .getFloatingActionText, //Build a better system for translation and localization.
-          child: const Icon(Icons.add),
-          onPressed: () => debugOut("Floating Action Button"),
-        ),
-        body: HomePage(),
+            tooltip: lang.getFloatingActionText,
+            onPressed: () => showDialog(
+                context: context,
+                builder: (BuildContext context) => Alert(
+                    "This is an alert", "It serves no purpose as of now.")),
+            child: const Icon(Icons.add) //debugOut("Floating Action Button"),
+            ),
+        body:
+            HomePage(), //Build a better system for translation and localization.
       ),
     );
   }
