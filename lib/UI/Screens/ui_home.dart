@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  /*const*/ HomePage({super.key});
+  HomePage({super.key});
   LangSelect lang = LangSelect();
 
   @override
