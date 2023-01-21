@@ -16,7 +16,11 @@ class PersistentDrawer extends StatelessWidget {
         children: [
           DrawerHeader(
             decoration: const BoxDecoration(
-              color: Colors.blue,
+              image: DecorationImage(
+                  image: NetworkImage(
+                      "https://images.pexels.com/photos/13766882/pexels-photo-13766882.jpeg"), //Make it so this image can be changed in settings.
+                  fit: BoxFit.cover),
+              // color: Colors.blue,
             ),
             child: InkWell(
               onTap: (() => debugOut("Profile Clicked")),
