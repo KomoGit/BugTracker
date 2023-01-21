@@ -1,6 +1,7 @@
 //This class governs the language, String determine what language is selected.
 import 'package:bugtracker/Localization/tr_english.dart';
 import 'package:bugtracker/Localization/tr_russian.dart';
+import 'package:bugtracker/Localization/tr_turkish.dart';
 
 class LangSelect {
   static String? currentUserGreetText;
@@ -25,6 +26,7 @@ class LangSelect {
     }
   }
 
+  //There should probably be a better way for this. The implementation is kinda god awful.
   void selectEnglish() {
     currentUserGreetText = English.greetUserText;
     currentTestPageText = English.testPageText;
@@ -45,15 +47,14 @@ class LangSelect {
     currentFloatingActionToolTipText = Russian.floatingActionToolTip;
   }
 
-  //TO BE IMPLETEMED.
   void selectTurkish() {
-    throw Exception("FATAL :- TO BE IMPLEMENTED.");
-    // currentTestPageText = Turkish.testPageText;
-    // currentAppBarText = Turkish.appBarText;
-    // currentHomeText = Turkish.homeButtonText;
-    // currentDummyText = Turkish.textPlaceHolder;
-    // currentDashboardText = Turkish.dashboardText;
-    // currentFloatingActionToolTipText = Turkish.floatingActionToolTip;
+    currentUserGreetText = Turkish.greetUserText;
+    currentTestPageText = Turkish.testPageText;
+    currentAppBarText = Turkish.appBarText;
+    currentHomeText = Turkish.homeButtonText;
+    currentDummyText = Turkish.textPlaceHolder;
+    currentDashboardText = Turkish.dashboardText;
+    currentFloatingActionToolTipText = Turkish.floatingActionToolTip;
   }
 
   /* 
