@@ -27,8 +27,7 @@ class MyApp extends StatelessWidget {
                 context: context,
                 builder: (BuildContext context) => Alert(
                     "This is an alert", "It serves no purpose as of now.")),
-            child: const Icon(Icons.add) //debugOut("Floating Action Button"),
-            ),
+            child: const Icon(Icons.add)),
         body:
             HomePage(), //Build a better system for translation and localization.
       ),
