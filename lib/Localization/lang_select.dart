@@ -1,20 +1,10 @@
 //This class governs the language, String determine what language is selected.
-import 'package:bugtracker/Localization/tr_english.dart';
-import 'package:bugtracker/Localization/tr_russian.dart';
-import 'package:bugtracker/Localization/tr_turkish.dart';
+import 'package:bugtracker/Localization/Translation/tr_english.dart';
+import 'package:bugtracker/Localization/Translation/tr_russian.dart';
+import 'package:bugtracker/Localization/Translation/tr_turkish.dart';
+import 'package:bugtracker/Localization/lang_current.dart';
 
 class LangSelect {
-  static String? currentYesText;
-  static String? currentNoText;
-  static String? currentSettingsText;
-  static String? currentUserGreetText;
-  static String? currentTestPageText;
-  static String? currentAppBarText;
-  static String? currentHomeText;
-  static String? currentDummyText;
-  static String? currentFloatingActionToolTipText;
-  static String? currentDashboardText;
-
   void selectLanguage(String selectedLang) {
     switch (selectedLang) {
       case "ru":
@@ -31,42 +21,45 @@ class LangSelect {
 
   //There should probably be a better way for this. The implementation is kinda god awful.
   void selectEnglish() {
-    currentYesText = English.yesText;
-    currentNoText = English.noText;
-    currentSettingsText = English.settingsText;
-    currentUserGreetText = English.greetUserText;
-    currentTestPageText = English.testPageText;
-    currentAppBarText = English.appBarText;
-    currentHomeText = English.homeButtonText;
-    currentDummyText = English.textPlaceHolder;
-    currentDashboardText = English.dashboardText;
-    currentFloatingActionToolTipText = English.floatingActionToolTip;
+    CurrentStrings.currentYesText = English.yesText;
+    CurrentStrings.currentNoText = English.noText;
+    CurrentStrings.currentSettingsText = English.settingsText;
+    CurrentStrings.currentUserGreetText = English.greetUserText;
+    CurrentStrings.currentTestPageText = English.testPageText;
+    CurrentStrings.currentAppBarText = English.appBarText;
+    CurrentStrings.currentHomeText = English.homeButtonText;
+    CurrentStrings.currentDummyText = English.textPlaceHolder;
+    CurrentStrings.currentDashboardText = English.dashboardText;
+    CurrentStrings.currentFloatingActionToolTipText =
+        English.floatingActionToolTip;
   }
 
   void selectRussian() {
-    currentYesText = Russian.yesText;
-    currentNoText = Russian.noText;
-    currentSettingsText = Russian.settingsText;
-    currentUserGreetText = Russian.greetUserText;
-    currentTestPageText = Russian.testPageText;
-    currentAppBarText = Russian.appBarText;
-    currentHomeText = Russian.homeButtonText;
-    currentDummyText = Russian.textPlaceHolder;
-    currentDashboardText = Russian.dashboardText;
-    currentFloatingActionToolTipText = Russian.floatingActionToolTip;
+    CurrentStrings.currentYesText = Russian.yesText;
+    CurrentStrings.currentNoText = Russian.noText;
+    CurrentStrings.currentSettingsText = Russian.settingsText;
+    CurrentStrings.currentUserGreetText = Russian.greetUserText;
+    CurrentStrings.currentTestPageText = Russian.testPageText;
+    CurrentStrings.currentAppBarText = Russian.appBarText;
+    CurrentStrings.currentHomeText = Russian.homeButtonText;
+    CurrentStrings.currentDummyText = Russian.textPlaceHolder;
+    CurrentStrings.currentDashboardText = Russian.dashboardText;
+    CurrentStrings.currentFloatingActionToolTipText =
+        Russian.floatingActionToolTip;
   }
 
   void selectTurkish() {
-    currentYesText = Turkish.yesText;
-    currentNoText = Turkish.noText;
-    currentSettingsText = Turkish.settingsText;
-    currentUserGreetText = Turkish.greetUserText;
-    currentTestPageText = Turkish.testPageText;
-    currentAppBarText = Turkish.appBarText;
-    currentHomeText = Turkish.homeButtonText;
-    currentDummyText = Turkish.textPlaceHolder;
-    currentDashboardText = Turkish.dashboardText;
-    currentFloatingActionToolTipText = Turkish.floatingActionToolTip;
+    CurrentStrings.currentYesText = Turkish.yesText;
+    CurrentStrings.currentNoText = Turkish.noText;
+    CurrentStrings.currentSettingsText = Turkish.settingsText;
+    CurrentStrings.currentUserGreetText = Turkish.greetUserText;
+    CurrentStrings.currentTestPageText = Turkish.testPageText;
+    CurrentStrings.currentAppBarText = Turkish.appBarText;
+    CurrentStrings.currentHomeText = Turkish.homeButtonText;
+    CurrentStrings.currentDummyText = Turkish.textPlaceHolder;
+    CurrentStrings.currentDashboardText = Turkish.dashboardText;
+    CurrentStrings.currentFloatingActionToolTipText =
+        Turkish.floatingActionToolTip;
   }
 
   /* 
@@ -74,42 +67,42 @@ class LangSelect {
   This is access point for all texts.
    */
   String? get getYesText {
-    return currentYesText!;
+    return CurrentStrings.currentYesText!;
   }
 
   String? get getNoText {
-    return currentNoText!;
+    return CurrentStrings.currentNoText!;
   }
 
   String? get getSettingsText {
-    return currentSettingsText!;
+    return CurrentStrings.currentSettingsText!;
   }
 
   String? get getFloatingActionText {
-    return currentFloatingActionToolTipText!;
+    return CurrentStrings.currentFloatingActionToolTipText!;
   }
 
   String? get getDashboardText {
-    return currentDashboardText!;
+    return CurrentStrings.currentDashboardText!;
   }
 
   String? get getDummyText {
-    return currentDummyText!;
+    return CurrentStrings.currentDummyText!;
   }
 
   String? get getAppBarText {
-    return currentAppBarText!;
+    return CurrentStrings.currentAppBarText!;
   }
 
   String? get getHomeText {
-    return currentHomeText!;
+    return CurrentStrings.currentHomeText!;
   }
 
   String? get getTestPageText {
-    return currentTestPageText!;
+    return CurrentStrings.currentTestPageText!;
   }
 
   String? get getUserGreetText {
-    return currentUserGreetText!;
+    return CurrentStrings.currentUserGreetText!;
   }
 }
