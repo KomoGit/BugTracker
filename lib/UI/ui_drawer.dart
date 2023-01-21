@@ -1,5 +1,6 @@
-import 'package:bugtracker/UI/ui_app.dart';
-import 'package:bugtracker/UI/ui_testpage.dart';
+import 'package:bugtracker/UI/Screens/ui_app.dart';
+import 'package:bugtracker/UI/Screens/ui_settings.dart';
+import 'package:bugtracker/UI/Screens/ui_testpage.dart';
 import 'package:flutter/material.dart';
 import 'package:bugtracker/UI/ui_listitem.dart';
 import 'package:bugtracker/Debug/d_log.dart';
@@ -37,9 +38,10 @@ class PersistentDrawer extends StatelessWidget {
                 ),
               ),
             ),
-          ),
+          ), //When adding a list item, ensure that you have added them on Localization first.
           ListItem(lang.getHomeText!, const MyApp()),
           ListItem(lang.getTestPageText!, const TestPage()),
+          ListItem(lang.getSettingsText!, const SettingsPage())
         ],
       ),
     );
