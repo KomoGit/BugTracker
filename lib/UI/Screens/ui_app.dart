@@ -2,7 +2,7 @@ import 'package:bugtracker/Debug/d_log.dart';
 import 'package:bugtracker/Localization/lang_select.dart';
 import 'package:bugtracker/UI/ui_appbar.dart';
 import 'package:bugtracker/UI/ui_drawer.dart';
-import 'package:bugtracker/UI/ui_home.dart';
+import 'package:bugtracker/UI/Screens/ui_home.dart';
 import 'package:flutter/material.dart';
 
 LangSelect lang = LangSelect();
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //darkTheme: ,
+      //darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: const Color.fromARGB(25, 25, 25, 255),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           child: const Icon(Icons.add),
           onPressed: () => debugOut("Floating Action Button"),
         ),
-        body: /*const*/ HomePage(),
+        body: HomePage(),
       ),
     );
   }
