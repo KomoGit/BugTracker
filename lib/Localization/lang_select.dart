@@ -4,6 +4,7 @@ import 'package:bugtracker/Localization/tr_russian.dart';
 import 'package:bugtracker/Localization/tr_turkish.dart';
 
 class LangSelect {
+  static String? currentSettingsText;
   static String? currentUserGreetText;
   static String? currentTestPageText;
   static String? currentAppBarText;
@@ -28,6 +29,7 @@ class LangSelect {
 
   //There should probably be a better way for this. The implementation is kinda god awful.
   void selectEnglish() {
+    currentSettingsText = English.settingsText;
     currentUserGreetText = English.greetUserText;
     currentTestPageText = English.testPageText;
     currentAppBarText = English.appBarText;
@@ -38,6 +40,7 @@ class LangSelect {
   }
 
   void selectRussian() {
+    currentSettingsText = Russian.settingsText;
     currentUserGreetText = Russian.greetUserText;
     currentTestPageText = Russian.testPageText;
     currentAppBarText = Russian.appBarText;
@@ -48,6 +51,7 @@ class LangSelect {
   }
 
   void selectTurkish() {
+    currentSettingsText = Turkish.settingsText;
     currentUserGreetText = Turkish.greetUserText;
     currentTestPageText = Turkish.testPageText;
     currentAppBarText = Turkish.appBarText;
@@ -61,6 +65,10 @@ class LangSelect {
   Return text elements from here. 
   This is access point for all texts.
    */
+  String? get getSettingsText {
+    return currentSettingsText!;
+  }
+
   String? get getFloatingActionText {
     return currentFloatingActionToolTipText!;
   }

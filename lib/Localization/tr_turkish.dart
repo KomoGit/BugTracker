@@ -2,6 +2,7 @@
 //tr_ singinifies translation. Not Turkiye
 
 class Turkish {
+  static String settingsText = "Ayarlar";
   static String greetUserText = "Merhaba ";
   static String testPageText = "Test Sayfası";
   static String appBarText = "Proje - İzleyici";
