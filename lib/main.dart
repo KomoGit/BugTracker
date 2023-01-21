@@ -5,6 +5,6 @@ import 'UI/ui_app.dart';
 //Ensure no code is added here.
 void main() {
   LangSelect lang = LangSelect();
-  lang.selectLanguage("ru");
+  lang.selectLanguage("jp");
   runApp(const MyApp());
 }
