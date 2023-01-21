@@ -7,10 +7,10 @@ import 'package:bugtracker/Localization/lang_current.dart';
 class LangSelect {
   void selectLanguage(String selectedLang) {
     switch (selectedLang) {
-      case "ru":
+      case "Russian":
         selectRussian();
         break;
-      case "tr":
+      case "Turkish":
         selectTurkish();
         break;
       default:
