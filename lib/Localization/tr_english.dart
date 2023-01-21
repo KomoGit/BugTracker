@@ -1,6 +1,8 @@
 //Translations for English language UI.
 
 class English {
+  static String yesText = "Yes";
+  static String noText = "No";
   static String settingsText = "Settings";
   static String greetUserText = "Hello ";
   static String testPageText = "Test Page";

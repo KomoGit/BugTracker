@@ -2,6 +2,8 @@
 //tr_ singinifies translation. Not Turkiye
 
 class Turkish {
+  static String yesText = "Evet";
+  static String noText = "Hayır";
   static String settingsText = "Ayarlar";
   static String greetUserText = "Merhaba ";
   static String testPageText = "Test Sayfası";
