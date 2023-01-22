@@ -1,7 +1,11 @@
 import 'package:bugtracker/UI/Screens/ui_app.dart';
 import 'package:flutter/material.dart';
 
-const List<String> list = <String>['English (default)', 'Russian', 'Turkish'];
+List<String> list = <String>[
+  lang.getTextEnglish!,
+  lang.getTextRussian!,
+  lang.getTextTurkish!
+];
 
 class DropdownButtonWidget extends StatefulWidget {
   const DropdownButtonWidget({super.key});
