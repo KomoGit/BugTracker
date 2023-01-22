@@ -36,7 +36,7 @@ class SettingsPage extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
-                  Padding(padding: EdgeInsets.all(10)),
+                  Padding(padding: EdgeInsets.all(20)),
                   DropdownButtonWidget()
                 ],
               ),

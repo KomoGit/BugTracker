@@ -28,7 +28,7 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
     return DropdownButton<String>(
       value: dropdownValue,
       icon: const Icon(Icons.arrow_downward),
-      // elevation: 4,
+      elevation: 4,
       style: const TextStyle(color: Colors.deepPurple),
       onChanged: (String? value) {
         // This is called when the user selects an item.
