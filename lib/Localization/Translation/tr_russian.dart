@@ -1,6 +1,7 @@
 //Translations for Russian language UI.
 
 class Russian {
+  static String lang = "Русский";
   static String yesText = "Да";
   static String noText = "Нет";
   static String settingsText = "Настройки";
