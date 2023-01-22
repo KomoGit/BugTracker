@@ -106,6 +106,7 @@ class LangSelect {
     return CurrentStrings.currentUserGreetText!;
   }
 
+  //Self Translations for the languages.
   String? get getTextEnglish {
     return English.lang;
   }
