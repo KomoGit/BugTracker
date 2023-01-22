@@ -15,8 +15,16 @@ class PersistentDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: const Offset(-10, 1),
+                )
+              ],
+              image: const DecorationImage(
                   image: NetworkImage(
                       "https://images.pexels.com/photos/13766882/pexels-photo-13766882.jpeg"), //Make it so this image can be changed in settings.
                   fit: BoxFit.cover),
