@@ -1,4 +1,5 @@
 class CurrentStrings {
+  static String? currentChangeLanguageText;
   static String? currentYesText;
   static String? currentNoText;
   static String? currentSettingsText;

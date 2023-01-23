@@ -1,8 +1,9 @@
 //Translations for Turkish language UI.
-//tr_ singinifies translation. Not Turkiye
+//tr_ siginifies translation. Not Turkiye
 
 class Turkish {
   static String lang = "Türkçe";
+  static String changeLanguageText = "Dili değiştir";
   static String yesText = "Evet";
   static String noText = "Hayır";
   static String settingsText = "Ayarlar";

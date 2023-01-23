@@ -2,6 +2,7 @@
 
 class Russian {
   static String lang = "Русский";
+  static String changeLanguageText = "Изменить язык";
   static String yesText = "Да";
   static String noText = "Нет";
   static String settingsText = "Настройки";

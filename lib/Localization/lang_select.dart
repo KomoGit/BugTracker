@@ -21,6 +21,7 @@ class LangSelect {
 
   //There should probably be a better way for this. The implementation is kinda god awful.
   void selectEnglish() {
+    CurrentStrings.currentChangeLanguageText = English.changeLanguageText;
     CurrentStrings.currentYesText = English.yesText;
     CurrentStrings.currentNoText = English.noText;
     CurrentStrings.currentSettingsText = English.settingsText;
@@ -35,6 +36,7 @@ class LangSelect {
   }
 
   void selectRussian() {
+    CurrentStrings.currentChangeLanguageText = Russian.changeLanguageText;
     CurrentStrings.currentYesText = Russian.yesText;
     CurrentStrings.currentNoText = Russian.noText;
     CurrentStrings.currentSettingsText = Russian.settingsText;
@@ -49,6 +51,7 @@ class LangSelect {
   }
 
   void selectTurkish() {
+    CurrentStrings.currentChangeLanguageText = Turkish.changeLanguageText;
     CurrentStrings.currentYesText = Turkish.yesText;
     CurrentStrings.currentNoText = Turkish.noText;
     CurrentStrings.currentSettingsText = Turkish.settingsText;
@@ -104,6 +107,10 @@ class LangSelect {
 
   String? get getUserGreetText {
     return CurrentStrings.currentUserGreetText!;
+  }
+
+  String? get getChangeLanguageText {
+    return CurrentStrings.currentChangeLanguageText!;
   }
 
   //Self Translations for the languages.

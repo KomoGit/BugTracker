@@ -2,6 +2,7 @@
 
 class English {
   static String lang = "English";
+  static String changeLanguageText = "Change Language";
   static String yesText = "Yes";
   static String noText = "No";
   static String settingsText = "Settings";
