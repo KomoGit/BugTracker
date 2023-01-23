@@ -31,7 +31,6 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
       elevation: 4,
       style: const TextStyle(color: Colors.deepPurple),
       onChanged: (String? value) {
-        // This is called when the user selects an item.
         setState(() {
           lang.selectLanguage(value!);
           dropdownValue = value;
