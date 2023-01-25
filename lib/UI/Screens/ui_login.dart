@@ -1,4 +1,3 @@
-import 'package:bugtracker/UI/Widgets/ui_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,14 +7,17 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PersistentAppbar(),
-      backgroundColor: Colors.green,
-      body: Container(
+      //appBar: const PersistentAppbar(),
+      backgroundColor: Colors.grey[300],
+      body: SafeArea(
         child: Center(
-            child: Text(
-          "Please Login",
-          style: GoogleFonts.bebasNeue(fontSize: 36),
-        )),
+          child: Column(children: [
+            Text(
+              "Test",
+              style: GoogleFonts.bebasNeue(fontSize: 46),
+            ),
+          ]),
+        ),
       ),
     );
   }

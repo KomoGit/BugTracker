@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    lang.selectLanguage("");
     return MaterialApp(
       //darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
