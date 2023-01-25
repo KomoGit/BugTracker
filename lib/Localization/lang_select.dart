@@ -19,56 +19,23 @@ class LangSelect {
     }
   }
 
-  //There should probably be a better way for this. The implementation is kinda god awful.
-  void selectEnglish() {
-    CurrentStrings.currentChangeLanguageText = English.changeLanguageText;
-    CurrentStrings.currentYesText = English.yesText;
-    CurrentStrings.currentNoText = English.noText;
-    CurrentStrings.currentSettingsText = English.settingsText;
-    CurrentStrings.currentUserGreetText = English.greetUserText;
-    CurrentStrings.currentTestPageText = English.testPageText;
-    CurrentStrings.currentAppBarText = English.appBarText;
-    CurrentStrings.currentHomeText = English.homeButtonText;
-    CurrentStrings.currentDummyText = English.textPlaceHolder;
-    CurrentStrings.currentDashboardText = English.dashboardText;
-    CurrentStrings.currentFloatingActionToolTipText =
-        English.floatingActionToolTip;
+  String? get getTextEnglish {
+    return English.lang;
   }
 
-  void selectRussian() {
-    CurrentStrings.currentChangeLanguageText = Russian.changeLanguageText;
-    CurrentStrings.currentYesText = Russian.yesText;
-    CurrentStrings.currentNoText = Russian.noText;
-    CurrentStrings.currentSettingsText = Russian.settingsText;
-    CurrentStrings.currentUserGreetText = Russian.greetUserText;
-    CurrentStrings.currentTestPageText = Russian.testPageText;
-    CurrentStrings.currentAppBarText = Russian.appBarText;
-    CurrentStrings.currentHomeText = Russian.homeButtonText;
-    CurrentStrings.currentDummyText = Russian.textPlaceHolder;
-    CurrentStrings.currentDashboardText = Russian.dashboardText;
-    CurrentStrings.currentFloatingActionToolTipText =
-        Russian.floatingActionToolTip;
+  String? get getTextRussian {
+    return Russian.lang;
   }
 
-  void selectTurkish() {
-    CurrentStrings.currentChangeLanguageText = Turkish.changeLanguageText;
-    CurrentStrings.currentYesText = Turkish.yesText;
-    CurrentStrings.currentNoText = Turkish.noText;
-    CurrentStrings.currentSettingsText = Turkish.settingsText;
-    CurrentStrings.currentUserGreetText = Turkish.greetUserText;
-    CurrentStrings.currentTestPageText = Turkish.testPageText;
-    CurrentStrings.currentAppBarText = Turkish.appBarText;
-    CurrentStrings.currentHomeText = Turkish.homeButtonText;
-    CurrentStrings.currentDummyText = Turkish.textPlaceHolder;
-    CurrentStrings.currentDashboardText = Turkish.dashboardText;
-    CurrentStrings.currentFloatingActionToolTipText =
-        Turkish.floatingActionToolTip;
+  String? get getTextTurkish {
+    return Turkish.lang;
   }
 
   /* 
   Return text elements from here. 
   This is access point for all texts.
    */
+
   String? get getYesText {
     return CurrentStrings.currentYesText!;
   }
@@ -111,18 +78,5 @@ class LangSelect {
 
   String? get getChangeLanguageText {
     return CurrentStrings.currentChangeLanguageText!;
-  }
-
-  //Self Translations for the languages.
-  String? get getTextEnglish {
-    return English.lang;
-  }
-
-  String? get getTextRussian {
-    return Russian.lang;
-  }
-
-  String? get getTextTurkish {
-    return Turkish.lang;
   }
 }
