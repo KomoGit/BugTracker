@@ -54,8 +54,10 @@ class PersistentDrawer extends StatelessWidget {
           ), //When adding a list item, ensure that you have added them on Localization first.
           ListItem(lang.getHomeText!, const MyApp()),
           ListItem(lang.getTestPageText!, const TestPage()),
-          ListItem("Login Page",
-              const LoginPage()), //Login page should have the text added to lang_
+          ListItem(
+            "Login Page",
+            const LoginPage(),
+          ), //Login page should have the text added to lang
           ListItem(lang.getSettingsText!, const SettingsPage())
         ],
       ),
