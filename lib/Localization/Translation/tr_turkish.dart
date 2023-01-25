@@ -1,7 +1,10 @@
 //Translations for Turkish language UI.
 //tr_ siginifies translation. Not Turkiye
 
-class Turkish {
+import 'package:bugtracker/Localization/lang_current.dart';
+import 'package:bugtracker/Localization/lang_select.dart';
+
+class Turkish extends LangSelect {
   static String lang = "Türkçe";
   static String changeLanguageText = "Dili değiştir";
   static String yesText = "Evet";
@@ -14,4 +17,19 @@ class Turkish {
   static String floatingActionToolTip = "Yeni Bilet";
   static String dashboardText = "Gösterge Paneli";
   static String textPlaceHolder = "Sahte Metin, Değiştir beni!";
+}
+
+void selectTurkish() {
+  CurrentStrings.currentChangeLanguageText = Turkish.changeLanguageText;
+  CurrentStrings.currentYesText = Turkish.yesText;
+  CurrentStrings.currentNoText = Turkish.noText;
+  CurrentStrings.currentSettingsText = Turkish.settingsText;
+  CurrentStrings.currentUserGreetText = Turkish.greetUserText;
+  CurrentStrings.currentTestPageText = Turkish.testPageText;
+  CurrentStrings.currentAppBarText = Turkish.appBarText;
+  CurrentStrings.currentHomeText = Turkish.homeButtonText;
+  CurrentStrings.currentDummyText = Turkish.textPlaceHolder;
+  CurrentStrings.currentDashboardText = Turkish.dashboardText;
+  CurrentStrings.currentFloatingActionToolTipText =
+      Turkish.floatingActionToolTip;
 }
