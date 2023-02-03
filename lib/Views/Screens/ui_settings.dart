@@ -1,6 +1,6 @@
-import 'package:bugtracker/UI/Widgets/ui_appbar.dart';
-import 'package:bugtracker/UI/Widgets/ui_drawer.dart';
-import 'package:bugtracker/UI/Widgets/ui_dropdown.dart';
+import 'package:bugtracker/Views/Widgets/ui_appbar.dart';
+import 'package:bugtracker/Views/Widgets/ui_drawer.dart';
+import 'package:bugtracker/Views/Widgets/ui_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

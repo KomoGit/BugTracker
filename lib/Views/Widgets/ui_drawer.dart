@@ -1,9 +1,9 @@
-import 'package:bugtracker/UI/Screens/ui_app.dart';
-import 'package:bugtracker/UI/Screens/ui_login.dart';
-import 'package:bugtracker/UI/Screens/ui_settings.dart';
-import 'package:bugtracker/UI/Screens/ui_testpage.dart';
+import 'package:bugtracker/Views/Screens/ui_app.dart';
+import 'package:bugtracker/Views/Screens/ui_login.dart';
+import 'package:bugtracker/Views/Screens/ui_settings.dart';
+import 'package:bugtracker/Views/Screens/ui_testpage.dart';
 import 'package:flutter/material.dart';
-import 'package:bugtracker/UI/Widgets/ui_listitem.dart';
+import 'package:bugtracker/Views/Widgets/ui_listitem.dart';
 import 'package:bugtracker/Debug/d_log.dart';
 
 class PersistentDrawer extends StatelessWidget {

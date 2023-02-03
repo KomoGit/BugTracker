@@ -1,4 +1,4 @@
-import 'package:bugtracker/UI/Screens/ui_app.dart';
+import 'package:bugtracker/Views/Screens/ui_app.dart';
 import 'package:flutter/material.dart';
 
 List<String> list = <String>[

@@ -1,8 +1,8 @@
 import 'package:bugtracker/Localization/lang_select.dart';
-import 'package:bugtracker/UI/Widgets/ui_alert.dart';
-import 'package:bugtracker/UI/Widgets/ui_appbar.dart';
-import 'package:bugtracker/UI/Widgets/ui_drawer.dart';
-import 'package:bugtracker/UI/Screens/ui_home.dart';
+import 'package:bugtracker/Views/Widgets/ui_alert.dart';
+import 'package:bugtracker/Views/Widgets/ui_appbar.dart';
+import 'package:bugtracker/Views/Widgets/ui_drawer.dart';
+import 'package:bugtracker/Views/Screens/ui_home.dart';
 import 'package:flutter/material.dart';
 
 LangSelect lang = LangSelect();

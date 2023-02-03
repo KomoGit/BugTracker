@@ -1,5 +1,5 @@
 import 'package:bugtracker/Localization/lang_select.dart';
-import 'package:bugtracker/UI/Widgets/ui_cards.dart';
+import 'package:bugtracker/Views/Widgets/ui_cards.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

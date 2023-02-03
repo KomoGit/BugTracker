@@ -1,5 +1,5 @@
 // ignore: unused_import
-import 'package:bugtracker/UI/Widgets/ui_appbar.dart';
+import 'package:bugtracker/Views/Widgets/ui_appbar.dart';
 import 'package:flutter/material.dart';
 
 class TicketForm extends StatelessWidget {
