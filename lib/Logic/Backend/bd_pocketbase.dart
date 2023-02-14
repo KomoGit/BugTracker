@@ -6,11 +6,11 @@ class GetSetUsers {
   Future<List<User>> fromRecordsToModels(PocketBase pb) async {
     var rawData = await pb.collection('users').getFullList();
     List<RecordModel> listOfUser = rawData;
-    List<User> categories = [];
+    List<User> users = [];
     for (RecordModel model in listOfUser) {
-      categories.add(User.recordToModel(model));
+      users.add(User.recordToModel(model));
     }
-    return categories;
+    return users;
   }
 
   //This might seem confusing but here is the jist. We take a model that contains data
