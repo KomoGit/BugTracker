@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ListItem extends StatelessWidget {
-  final StatelessWidget page;
+  final Widget page;
+  //final StatelessWidget page;
   String itemname = "WARNING : Value is not given.";
   ListItem(this.itemname, this.page, {super.key});
   @override
