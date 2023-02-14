@@ -3,6 +3,9 @@ import 'package:bugtracker/Views/Widgets/ui_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+List<TextEditingController> _controller =
+    List.generate(2, (i) => TextEditingController());
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -22,16 +25,65 @@ class LoginPage extends StatelessWidget {
           child: BlurryContainer.square(
             blur: 5,
             child: SizedBox(
-                width: 500,
-                height: 500,
+                width: 350,
+                height: 350,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      "Hello World",
+                      "Please Login",
                       style: GoogleFonts.bebasNeue(
                           color: Colors.white, fontSize: 24),
                     ),
+                    const TextField(
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(fontSize: 17, color: Colors.white),
+                        hintText: 'Your Email',
+                        suffixIcon: Icon(
+                          Icons.email_outlined,
+                          color: Colors.white,
+                        ),
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.all(20),
+                      ),
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(fontSize: 17, color: Colors.white),
+                        hintText: 'Your Password',
+                        suffixIcon:
+                            Icon(Icons.lock_open_outlined, color: Colors.white),
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.all(20),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                          shape:
+                              MaterialStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ))),
+                      child: const Text("Login"),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text.rich(
+                        TextSpan(
+                          text: 'Not a member? ',
+                          style: TextStyle(fontSize: 12, color: Colors.white),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: 'click here to register',
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                  decoration: TextDecoration.underline,
+                                )),
+                            // can add more TextSpans here...
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 )),
           ),
