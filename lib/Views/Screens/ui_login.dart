@@ -14,8 +14,6 @@ class LoginPage extends StatelessWidget {
       decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/image/login_background.jpeg"),
-              // image: NetworkImage(
-              //     "https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
               fit: BoxFit.cover)),
       child: Scaffold(
         backgroundColor: Colors.transparent,
