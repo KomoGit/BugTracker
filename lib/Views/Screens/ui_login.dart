@@ -1,5 +1,4 @@
 import 'package:blurrycontainer/blurrycontainer.dart';
-import 'package:bugtracker/Views/Widgets/ui_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,8 +18,6 @@ class LoginPage extends StatelessWidget {
               fit: BoxFit.cover)),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar:
-            const PersistentAppbar(), //Remove this after login screen is created.
         body: Center(
           child: BlurryContainer.square(
             blur: 5,
@@ -33,10 +30,11 @@ class LoginPage extends StatelessWidget {
                     Text(
                       "Please Login",
                       style: GoogleFonts.bebasNeue(
-                          color: Colors.white, fontSize: 24),
+                          color: Colors.white, fontSize: 24, letterSpacing: 2),
                     ),
-                    const TextField(
-                      decoration: InputDecoration(
+                    TextField(
+                      style: GoogleFonts.montserrat(color: Colors.white),
+                      decoration: const InputDecoration(
                         hintStyle: TextStyle(fontSize: 17, color: Colors.white),
                         hintText: 'Your Email',
                         suffixIcon: Icon(
@@ -47,8 +45,10 @@ class LoginPage extends StatelessWidget {
                         contentPadding: EdgeInsets.all(20),
                       ),
                     ),
-                    const TextField(
-                      decoration: InputDecoration(
+                    TextField(
+                      style: GoogleFonts.montserrat(color: Colors.white),
+                      obscureText: true,
+                      decoration: const InputDecoration(
                         hintStyle: TextStyle(fontSize: 17, color: Colors.white),
                         hintText: 'Your Password',
                         suffixIcon:
