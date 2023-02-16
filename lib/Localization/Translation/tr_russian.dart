@@ -16,6 +16,14 @@ class Russian extends LangSelect {
   static String floatingActionToolTip = "Новый билет";
   static String dashboardText = "Приборная панель";
   static String textPlaceHolder = "Фиктивный текст, замени меня!";
+  //Login page
+  static String emailInputField = "Ваш электронный адрес";
+  static String passwordInputField = "Ваш пароль";
+  static String registerTextButtonFirst = "Не член? ";
+  static String registerTextButtonSecond =
+      "Нажмите здесь, чтобы зарегистрироваться";
+  static String loginHeader = "Пожалуйста, войдите";
+  static String loginButtonText = "логин";
 }
 
 void selectRussian() {
@@ -31,4 +39,13 @@ void selectRussian() {
   CurrentStrings.currentDashboardText = Russian.dashboardText;
   CurrentStrings.currentFloatingActionToolTipText =
       Russian.floatingActionToolTip;
+  //Login Page
+  CurrentStrings.currentEmailInputField = Russian.emailInputField;
+  CurrentStrings.currentPasswordInputField = Russian.passwordInputField;
+  CurrentStrings.currentLoginButtonText = Russian.loginButtonText;
+  CurrentStrings.currentLoginHeader = Russian.loginHeader;
+  CurrentStrings.currentRegisterTextButtonFirst =
+      Russian.registerTextButtonFirst;
+  CurrentStrings.currentRegisterTextButtonSecond =
+      Russian.registerTextButtonSecond;
 }

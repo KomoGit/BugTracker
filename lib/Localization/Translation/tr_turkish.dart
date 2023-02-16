@@ -17,6 +17,13 @@ class Turkish extends LangSelect {
   static String floatingActionToolTip = "Yeni Bilet";
   static String dashboardText = "Gösterge Paneli";
   static String textPlaceHolder = "Sahte Metin, Değiştir beni!";
+  //Login Page
+  static String emailInputField = "E-posta adresiniz";
+  static String passwordInputField = "Şifreniz";
+  static String registerTextButtonFirst = "Üye değil misin? ";
+  static String registerTextButtonSecond = "Kayıt olmak için buraya tıklayın";
+  static String loginHeader = "Lütfen giriş yapın";
+  static String loginButtonText = "Giriş yapmak";
 }
 
 void selectTurkish() {
@@ -32,4 +39,13 @@ void selectTurkish() {
   CurrentStrings.currentDashboardText = Turkish.dashboardText;
   CurrentStrings.currentFloatingActionToolTipText =
       Turkish.floatingActionToolTip;
+  //Login Page
+  CurrentStrings.currentEmailInputField = Turkish.emailInputField;
+  CurrentStrings.currentPasswordInputField = Turkish.passwordInputField;
+  CurrentStrings.currentLoginButtonText = Turkish.loginButtonText;
+  CurrentStrings.currentLoginHeader = Turkish.loginHeader;
+  CurrentStrings.currentRegisterTextButtonFirst =
+      Turkish.registerTextButtonFirst;
+  CurrentStrings.currentRegisterTextButtonSecond =
+      Turkish.registerTextButtonSecond;
 }

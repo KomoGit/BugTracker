@@ -16,6 +16,13 @@ class English extends LangSelect {
   static String floatingActionToolTip = "New Ticket";
   static String dashboardText = "Dashboard";
   static String textPlaceHolder = "Dummy Text, Replace me!";
+  //Login Page
+  static String emailInputField = "Your email";
+  static String passwordInputField = "Your Password";
+  static String registerTextButtonFirst = "Not a member? ";
+  static String registerTextButtonSecond = "click here to register";
+  static String loginHeader = "Please Login";
+  static String loginButtonText = "Login";
 }
 
 void selectEnglish() {
@@ -31,4 +38,13 @@ void selectEnglish() {
   CurrentStrings.currentDashboardText = English.dashboardText;
   CurrentStrings.currentFloatingActionToolTipText =
       English.floatingActionToolTip;
+  //Login Page
+  CurrentStrings.currentEmailInputField = English.emailInputField;
+  CurrentStrings.currentPasswordInputField = English.passwordInputField;
+  CurrentStrings.currentLoginButtonText = English.loginButtonText;
+  CurrentStrings.currentLoginHeader = English.loginHeader;
+  CurrentStrings.currentRegisterTextButtonFirst =
+      English.registerTextButtonFirst;
+  CurrentStrings.currentRegisterTextButtonSecond =
+      English.registerTextButtonSecond;
 }

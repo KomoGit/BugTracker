@@ -1,5 +1,6 @@
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:bugtracker/Debug/d_log.dart';
+import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -51,35 +52,37 @@ class _LoginUserInputState extends State<LoginUserInput> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "Please Login",
+                    CurrentStrings.currentLoginHeader!,
                     style: GoogleFonts.bebasNeue(
                         color: Colors.white, fontSize: 24, letterSpacing: 2),
                   ),
                   TextField(
                     controller: _controller[0],
                     style: GoogleFonts.montserrat(color: Colors.white),
-                    decoration: const InputDecoration(
-                      hintStyle: TextStyle(fontSize: 17, color: Colors.white),
-                      hintText: 'Your Email',
-                      suffixIcon: Icon(
+                    decoration: InputDecoration(
+                      hintStyle:
+                          const TextStyle(fontSize: 17, color: Colors.white),
+                      hintText: CurrentStrings.currentEmailInputField,
+                      suffixIcon: const Icon(
                         Icons.email_outlined,
                         color: Colors.white,
                       ),
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.all(20),
+                      contentPadding: const EdgeInsets.all(20),
                     ),
                   ),
                   TextField(
                     controller: _controller[1],
                     style: GoogleFonts.montserrat(color: Colors.white),
                     obscureText: true,
-                    decoration: const InputDecoration(
-                      hintStyle: TextStyle(fontSize: 17, color: Colors.white),
-                      hintText: 'Your Password',
-                      suffixIcon:
-                          Icon(Icons.lock_open_outlined, color: Colors.white),
+                    decoration: InputDecoration(
+                      hintStyle:
+                          const TextStyle(fontSize: 17, color: Colors.white),
+                      hintText: CurrentStrings.currentPasswordInputField,
+                      suffixIcon: const Icon(Icons.lock_open_outlined,
+                          color: Colors.white),
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.all(20),
+                      contentPadding: const EdgeInsets.all(20),
                     ),
                   ),
                   ElevatedButton(
@@ -96,18 +99,20 @@ class _LoginUserInputState extends State<LoginUserInput> {
                         shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     ))),
-                    child: const Text("Login"),
+                    child: Text(CurrentStrings.currentLoginButtonText!),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: const Text.rich(
+                    child: Text.rich(
                       TextSpan(
-                        text: 'Not a member? ',
-                        style: TextStyle(fontSize: 12, color: Colors.white),
+                        text: CurrentStrings.currentRegisterTextButtonFirst,
+                        style:
+                            const TextStyle(fontSize: 12, color: Colors.white),
                         children: <TextSpan>[
                           TextSpan(
-                              text: 'click here to register',
-                              style: TextStyle(
+                              text: CurrentStrings
+                                  .currentRegisterTextButtonSecond,
+                              style: const TextStyle(
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline,
                               )),
@@ -115,7 +120,7 @@ class _LoginUserInputState extends State<LoginUserInput> {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               )),
         ),

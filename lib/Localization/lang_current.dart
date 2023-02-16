@@ -1,4 +1,12 @@
 class CurrentStrings {
+  //Login Page Text
+  static String? currentEmailInputField;
+  static String? currentPasswordInputField;
+  static String? currentRegisterTextButtonFirst;
+  static String? currentRegisterTextButtonSecond;
+  static String? currentLoginHeader;
+  static String? currentLoginButtonText;
+
   static String? currentChangeLanguageText;
   static String? currentYesText;
   static String? currentNoText;
