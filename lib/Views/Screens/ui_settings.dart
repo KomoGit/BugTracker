@@ -1,3 +1,4 @@
+import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:bugtracker/Views/Widgets/ui_appbar.dart';
 import 'package:bugtracker/Views/Widgets/ui_drawer.dart';
 import 'package:bugtracker/Views/Widgets/ui_dropdown.dart';
@@ -22,7 +23,7 @@ class SettingsPage extends StatelessWidget {
                 const Padding(padding: EdgeInsets.all(15)),
                 Center(
                   child: Text(
-                    lang.getSettingsText!,
+                    CurrentStrings.currentSettingsText!,
                     style: GoogleFonts.montserrat(
                         color: Colors.black, fontSize: 24),
                   ),

@@ -1,3 +1,4 @@
+import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:bugtracker/Localization/lang_select.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class PersistentAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(lang.getAppBarText!),
+      title: Text(CurrentStrings.currentAppBarText!),
     );
   }
 }

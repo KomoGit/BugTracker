@@ -1,3 +1,4 @@
+import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:bugtracker/Views/Screens/ui_app.dart';
 import 'package:bugtracker/Views/Screens/ui_login.dart';
 import 'package:bugtracker/Views/Screens/ui_settings.dart';
@@ -45,20 +46,21 @@ class PersistentDrawer extends StatelessWidget {
                           "https://randomuser.me/api/portraits/women/31.jpg"),
                     )),
                     Flexible(
-                      child: Text("${lang.getUserGreetText!}Lena!"),
+                      child:
+                          Text("${CurrentStrings.currentUserGreetText}Lena!"),
                     )
                   ],
                 ),
               ),
             ),
           ), //When adding a list item, ensure that you have added them on Localization first.
-          ListItem(lang.getHomeText!, const MyApp()),
-          ListItem(lang.getTestPageText!, const TestPage()),
+          ListItem(CurrentStrings.currentHomeText!, const MyApp()),
+          ListItem(CurrentStrings.currentTestPageText!, const TestPage()),
           ListItem(
             "Login Page",
             const LoginPage(),
           ), //Login page should have the text added to lang
-          ListItem(lang.getSettingsText!, const SettingsPage())
+          ListItem(CurrentStrings.currentSettingsText!, const SettingsPage())
         ],
       ),
     );

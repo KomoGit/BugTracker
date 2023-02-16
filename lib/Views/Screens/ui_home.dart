@@ -1,3 +1,4 @@
+import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:bugtracker/Localization/lang_select.dart';
 import 'package:bugtracker/Views/Widgets/ui_cards.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
       Row(children: [
         const Padding(padding: EdgeInsets.all(15)),
         Text(
-          lang.getDashboardText!,
+          CurrentStrings.currentDashboardText!,
           style: GoogleFonts.montserrat(
               color: Colors.white, fontSize: 24), //change the text color.
         ),
@@ -28,9 +29,11 @@ class HomePage extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           children: [
             const Padding(padding: EdgeInsets.all(10)),
-            DashboardCards(200, Center(child: Text(lang.getUserGreetText!))),
+            DashboardCards(
+                200, Center(child: Text(CurrentStrings.currentUserGreetText!))),
             const Padding(padding: EdgeInsets.all(10)),
-            DashboardCards(200, Center(child: Text(lang.getUserGreetText!))),
+            DashboardCards(
+                200, Center(child: Text(CurrentStrings.currentUserGreetText!))),
           ],
         ),
       ),
