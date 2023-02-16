@@ -1,5 +1,5 @@
 import 'package:bugtracker/Debug/d_log.dart';
-import 'package:bugtracker/Views/Screens/ui_app.dart';
+import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:flutter/material.dart';
 
 // An extremenly weird bug, if you don't change screens the alert dialog will not pop up.
@@ -20,13 +20,13 @@ class Alert extends StatelessWidget {
               debugOut("Action Yes");
               Navigator.pop(context);
             }),
-            child: Text(lang.getYesText!)),
+            child: Text(CurrentStrings.currentYesText!)),
         TextButton(
           onPressed: (() {
             debugOut("Action No");
             Navigator.pop(context);
           }),
-          child: Text(lang.getNoText!),
+          child: Text(CurrentStrings.currentNoText!),
         ),
       ],
     );
