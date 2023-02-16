@@ -1,5 +1,4 @@
 //Translations for Russian language UI.
-
 import 'package:bugtracker/Localization/lang_select.dart';
 import 'package:bugtracker/Localization/lang_current.dart';
 
