@@ -1,6 +1,5 @@
 import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:bugtracker/Localization/lang_select.dart';
-import 'package:bugtracker/Views/Widgets/ui_alert.dart';
 import 'package:bugtracker/Views/Widgets/ui_appbar.dart';
 import 'package:bugtracker/Views/Widgets/ui_drawer.dart';
 import 'package:bugtracker/Views/Screens/ui_home.dart';
@@ -15,7 +14,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: const Color.fromARGB(25, 25, 25, 255),
@@ -24,10 +22,7 @@ class MyApp extends StatelessWidget {
         //On Press a new window should be opened to allow user to insert ticket details
         floatingActionButton: FloatingActionButton(
             tooltip: CurrentStrings.currentFloatingActionToolTipText!,
-            onPressed: () => showDialog(
-                context: context,
-                builder: (BuildContext context) => Alert(
-                    "This is an alert", "It serves no purpose as of now.")),
+            onPressed: () {},
             child: const Icon(Icons.add)),
         body:
             HomePage(), //Build a better system for translation and localization.
