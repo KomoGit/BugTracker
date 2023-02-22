@@ -90,9 +90,9 @@ class _LoginUserInputState extends State<LoginUserInput> {
                       if (inputEmpty(_controller)) {
                         debugOut("The shit is blank!");
                       } else {
+                        // debugOut();
                         debugOut(_controller[0].text);
                         debugOut(_controller[1].text);
-                        _controller.clear();
                       }
                     },
                     style: ButtonStyle(
@@ -102,7 +102,9 @@ class _LoginUserInputState extends State<LoginUserInput> {
                     child: Text(CurrentStrings.currentLoginButtonText!),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      debugOut("Register button clicked.");
+                    },
                     child: Text.rich(
                       TextSpan(
                         text: CurrentStrings.currentRegisterTextButtonFirst,
