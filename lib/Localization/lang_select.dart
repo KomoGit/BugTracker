@@ -1,12 +1,16 @@
 //This class governs the language, String determine what language is selected.
-import 'package:bugtracker/Localization/Page/dashboard_english_translation.dart';
 import 'package:bugtracker/Localization/Page/login_english_translation.dart';
 import 'package:bugtracker/Localization/Translation/tr_english.dart';
 import 'package:bugtracker/Localization/Translation/tr_russian.dart';
 import 'package:bugtracker/Localization/Translation/tr_turkish.dart';
 
+import 'Page/dashboard_english_translation.dart';
+
+//Worse possible way to do this. Ensure you only have to call 1 single method.
+DashboardEnglish dashboardEnglish = DashboardEnglish();
+LoginPageEnglish loginPageEnglish = LoginPageEnglish();
+
 class LangSelect {
-  English eng = English();
   void selectLanguage(String selectedLang) {
     switch (selectedLang) {
       case "Русский":
@@ -23,9 +27,8 @@ class LangSelect {
 
   //Ensure open closed is applied here. We can't go back here adding other pages as they come up.
   void selectEnglish() {
-    // dashboardEnglish.setCurrentText();
-    eng.setCurrentText();
-    // loginPageEnglish.setCurrentText();
+    dashboardEnglish.setCurrentText();
+    loginPageEnglish.setCurrentText();
   }
 
   void selectTurkish() {}

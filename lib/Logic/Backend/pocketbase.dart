@@ -1,7 +1,7 @@
 import 'package:pocketbase/pocketbase.dart';
 import 'package:bugtracker/Model/model_user.dart';
 
-class GetSetUsers {
+class PocketbaseLogic {
   //DO NOT MODIFY
   Future<List<User>> fromRecordsToModels(PocketBase pb) async {
     var rawData = await pb.collection('users').getFullList();
