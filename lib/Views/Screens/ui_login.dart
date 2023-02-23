@@ -6,8 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 //TODO: Ensure controller gets cleaned after login is done, and if the fields are empty user should be notified.
 //TODO: Ensure the localization is added.
-List<TextEditingController> _controller =
-    List.generate(2, (i) => TextEditingController());
+
+TextEditingController _emailController = TextEditingController();
+TextEditingController _passController = TextEditingController();
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -23,8 +24,8 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-bool inputEmpty(List<TextEditingController> controller) {
-  if (controller.isEmpty) {
+bool inputIsEmpty(TextEditingController controller) {
+  if (controller.text == "") {
     return true;
   }
   return false;
@@ -57,7 +58,7 @@ class _LoginUserInputState extends State<LoginUserInput> {
                         color: Colors.white, fontSize: 24, letterSpacing: 2),
                   ),
                   TextField(
-                    controller: _controller[0],
+                    controller: _emailController, // _controller[0],
                     style: GoogleFonts.montserrat(color: Colors.white),
                     decoration: InputDecoration(
                       hintStyle:
@@ -72,7 +73,7 @@ class _LoginUserInputState extends State<LoginUserInput> {
                     ),
                   ),
                   TextField(
-                    controller: _controller[1],
+                    controller: _passController, //_controller[1],
                     style: GoogleFonts.montserrat(color: Colors.white),
                     obscureText: true,
                     decoration: InputDecoration(
@@ -87,12 +88,13 @@ class _LoginUserInputState extends State<LoginUserInput> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      if (inputEmpty(_controller)) {
-                        debugOut("The shit is blank!");
+                      if (inputIsEmpty(_emailController)) {
+                        debugOut("Email is empty");
+                      } else if (inputIsEmpty(_passController)) {
+                        debugOut("Password is empty");
                       } else {
-                        // debugOut();
-                        debugOut(_controller[0].text);
-                        debugOut(_controller[1].text);
+                        debugOut(_emailController.text);
+                        debugOut(_passController.text);
                       }
                     },
                     style: ButtonStyle(
