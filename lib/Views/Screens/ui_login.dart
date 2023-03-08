@@ -1,12 +1,17 @@
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:bugtracker/Debug/d_log.dart';
 import 'package:bugtracker/Localization/lang_current.dart';
+import 'package:bugtracker/Logic/Backend/pocketbase.dart';
+import 'package:bugtracker/Logic/utility.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //TODO: Ensure controller gets cleaned after login is done, and if the fields are empty user should be notified.
 //TODO: Ensure the localization is added.
+//TODO: Remove debugOut()s once they are no longer needed.
 
+UtilityMethods _utility = UtilityMethods();
+BackendLogic _backendLogic = BackendLogic();
 TextEditingController _emailController = TextEditingController();
 TextEditingController _passController = TextEditingController();
 
@@ -22,13 +27,6 @@ class LoginPage extends StatelessWidget {
                 fit: BoxFit.cover)),
         child: const LoginUserInput());
   }
-}
-
-bool inputIsEmpty(TextEditingController controller) {
-  if (controller.text == "") {
-    return true;
-  }
-  return false;
 }
 
 class LoginUserInput extends StatefulWidget {
@@ -58,7 +56,7 @@ class _LoginUserInputState extends State<LoginUserInput> {
                         color: Colors.white, fontSize: 24, letterSpacing: 2),
                   ),
                   TextField(
-                    controller: _emailController, // _controller[0],
+                    controller: _emailController,
                     style: GoogleFonts.montserrat(color: Colors.white),
                     decoration: InputDecoration(
                       hintStyle:
@@ -73,7 +71,7 @@ class _LoginUserInputState extends State<LoginUserInput> {
                     ),
                   ),
                   TextField(
-                    controller: _passController, //_controller[1],
+                    controller: _passController,
                     style: GoogleFonts.montserrat(color: Colors.white),
                     obscureText: true,
                     decoration: InputDecoration(
@@ -88,11 +86,12 @@ class _LoginUserInputState extends State<LoginUserInput> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      if (inputIsEmpty(_emailController)) {
+                      if (_utility.inputIsEmpty(_emailController)) {
                         debugOut("Email is empty");
-                      } else if (inputIsEmpty(_passController)) {
+                      } else if (_utility.inputIsEmpty(_passController)) {
                         debugOut("Password is empty");
                       } else {
+                        _backendLogic.checkConnectionToBackend;
                         debugOut(_emailController.text);
                         debugOut(_passController.text);
                       }
