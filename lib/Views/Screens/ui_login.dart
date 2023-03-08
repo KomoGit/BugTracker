@@ -3,6 +3,7 @@ import 'package:bugtracker/Debug/d_log.dart';
 import 'package:bugtracker/Localization/lang_current.dart';
 import 'package:bugtracker/Logic/Backend/pocketbase.dart';
 import 'package:bugtracker/Logic/utility.dart';
+import 'package:bugtracker/Views/Screens/ui_app.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,12 +21,14 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/image/login_background.jpeg"),
-                fit: BoxFit.cover)),
-        child: const LoginUserInput());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Container(
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/image/login_background.jpeg"),
+                    fit: BoxFit.cover)),
+            child: const LoginUserInput()));
   }
 }
 
@@ -85,15 +88,18 @@ class _LoginUserInputState extends State<LoginUserInput> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
                       if (_utility.inputIsEmpty(_emailController)) {
                         debugOut("Email is empty");
                       } else if (_utility.inputIsEmpty(_passController)) {
                         debugOut("Password is empty");
                       } else {
-                        _backendLogic.checkConnectionToBackend;
-                        debugOut(_emailController.text);
-                        debugOut(_passController.text);
+                        if (await _backendLogic.checkConnectionToBackend()) {
+                          debugOut(_emailController.text);
+                          debugOut(_passController.text);
+                        } else {
+                          debugOut("Connection could not be achieved.");
+                        }
                       }
                     },
                     style: ButtonStyle(
@@ -104,7 +110,12 @@ class _LoginUserInputState extends State<LoginUserInput> {
                   ),
                   TextButton(
                     onPressed: () {
-                      debugOut("Register button clicked.");
+                      //TODO: Once register form is created, ensure that this button sends user to that page.
+                      debugOut("Register button clicked");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => const MyApp())));
                     },
                     child: Text.rich(
                       TextSpan(
