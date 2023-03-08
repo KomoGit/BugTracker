@@ -1,7 +1,10 @@
+import 'dart:io';
+
+import 'package:bugtracker/Debug/d_log.dart';
 import 'package:pocketbase/pocketbase.dart';
 import 'package:bugtracker/Model/model_user.dart';
 
-class PocketbaseLogic {
+class BackendLogic {
   //DO NOT MODIFY
   Future<List<User>> fromRecordsToModels(PocketBase pb) async {
     var rawData = await pb.collection('users').getFullList();
@@ -18,5 +21,15 @@ class PocketbaseLogic {
   Future<void> fromModelToRecord(
       PocketBase pb, Map<String, dynamic> modelToRecord) async {
     await pb.collection('users').create(body: modelToRecord);
+  }
+
+  //DO NOT MODIFY
+  Future<bool> checkConnectionToBackend() async {
+    try {
+      final result = await InternetAddress.lookup('example.com');
+      return result.isNotEmpty && result[0].rawAddress.isNotEmpty;
+    } on SocketException catch (_) {
+      return false;
+    }
   }
 }
